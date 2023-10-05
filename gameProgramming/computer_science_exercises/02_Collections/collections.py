@@ -1,4 +1,4 @@
-# Collections Examples, Lily King, v0.2a
+# Collections Examples, Lily King, v0.2b
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -50,13 +50,25 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # Adding and Inserting Items to a List
 # .append() adds an item to the END of a list.
-breakfastFoods.append("hash browns")
-print(breakfastFoods)
-testScores.append(99)
-print(testScores)
-classGPA.append(1.99)
-print(classGPA)
+#breakfastFoods.append("hash browns")
+#print(breakfastFoods)
+#testScores.append(99)
+#print(testScores)
+#classGPA.append(1.99)
+#print(classGPA)
 
 # .insert() allows you to place an item at a specific index in the list.
-breakfastFoods.insert(3, "Parfait")
+#breakfastFoods.insert(3, "Parfait")
+#print(breakfastFoods)
+#testScores.insert(3, 55)
+#print(testScores)
+#classGPA.insert(3, 0.0)
+#print(classGPA)
+
+# PAUSE -- WYOC -- .append() another item to each list. .insert() an item at index 5 to each list.
+breakfastFoods.append("Honey Bun")
 print(breakfastFoods)
+testScores.append(100)
+print(testScores)
+classGPA.append(4.0)
+print(classGPA)
