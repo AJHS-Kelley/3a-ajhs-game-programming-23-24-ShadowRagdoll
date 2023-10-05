@@ -57,4 +57,6 @@ print(testScores)
 classGPA.append(1.99)
 print(classGPA)
 
-
+# .insert() allows you to place an item at a specific index in the list.
+breakfastFoods.insert(3, "Parfait")
+print(breakfastFoods)
