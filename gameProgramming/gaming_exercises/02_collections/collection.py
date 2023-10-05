@@ -26,26 +26,32 @@ weaponList = [
 # the location of each element in the list is the INDEX
 # first element is index[0]
 # stortcut to last element is index[-1]
-weaponNum = 0 
-while weaponNum < len(weaponList):
-    if weaponNum == 0 and weaponList[0] == True:
-        print("Your character is equipped with a shiny metal sword.\n")
-    if weaponNum == 0 and weaponList[1] == True:
-        print("Your character is equipped with a pistol.\n")
-    if weaponNum == 0 and weaponList[2] == True:
-        print("Your character is equipped with a missile launcher.\n")
-    if weaponNum == 0 and weaponList[3] == True:
-        print("Your character is equipped with a laser blaster.\n")
-    if weaponNum == 0 and weaponList[4] == True:
-        print("Your character is equipped with a ice beam.\n")
-    weaponNum += 1
+#weaponNum = 0 
+#while weaponNum < len(weaponList):
+    #if weaponNum == 0 and weaponList[0] == True:
+        #print("Your character is equipped with a shiny metal sword.\n")
+    #if weaponNum == 0 and weaponList[1] == True:
+       # print("Your character is equipped with a pistol.\n")
+    #if weaponNum == 0 and weaponList[2] == True:
+        #print("Your character is equipped with a missile launcher.\n")
+    #if weaponNum == 0 and weaponList[3] == True:
+        #print("Your character is equipped with a laser blaster.\n")
+    #if weaponNum == 0 and weaponList[4] == True:
+       # print("Your character is equipped with a ice beam.\n")
+    #weaponNum += 1
 
-
-
-
-
-
-# Item Exists in Inventory
+# ITEM EXISTS IN INVENTORY
+doorKeys = [
+    "red",
+    "blue",
+    "green",
+    "yellow"
+]
+item = input("Which key do you require?\n").lower().upper()
+if item in doorKeys:
+    print(f"You have the {item} key!\n")
+else:
+    print(f"You do not have the {item} key.\n")
 
 
 # Random Enemy Generator
