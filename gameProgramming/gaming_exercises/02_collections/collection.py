@@ -56,27 +56,38 @@ weaponList = [
 
 # Random Enemy Generator
 
-ememyBase = [
-    "Goblin",
-    "Dragon",
-    "Zombie",
-    "Gnome",
-    "Troll"
+enemyBase = [
+    "Goblin\n",
+    "Dragon\n",
+    "Zombie\n",
+    "Gnome\n",
+    "Troll\n"
 ]
 
-ememyType = [
-    "Warrior",
-    "Wizard",
-    "Assassin",
-    "Berserker",
-    "Paladin"
+enemyType = [
+    "Warrior\n",
+    "Wizard\n",
+    "Assassin\n",
+    "Berserker\n",
+    "Paladin\n"
 ]
 
-ememyPrefix = [
-    "Fire-Breathing",
-    "Gargantuan",
-    "Invisible",
-    "Vampiric",
-    "Exploding"
+enemyPrefix = [
+    "Fire-Breathing\n",
+    "Gargantuan\n",
+    "Invisible\n",
+    "Vampiric\n",
+    "Exploding\n"
 ]
 
+import random 
+
+# Index Range (0, 4)
+enemyNames = []
+while len(enemyNames) < 15:
+    enemyBaseGen = enemyBase[random.randint(0,4)]
+    enemyTypeGen = enemyType[random.randint(0,4)]
+    enemyPrefixGen = enemyPrefix[random.randint(0,4)]
+    newEnemy = enemyPrefixGen + " " + enemyBaseGen + " " + enemyTypeGen
+    enemyNames.append(newEnemy)
+print(enemyNames)
