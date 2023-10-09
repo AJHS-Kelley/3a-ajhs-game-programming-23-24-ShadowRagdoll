@@ -41,17 +41,42 @@ weaponList = [
     #weaponNum += 1
 
 # ITEM EXISTS IN INVENTORY
-doorKeys = [
-    "red",
-    "blue",
-    "green",
-    "yellow"
-]
-item = input("Which key do you require?\n").lower().upper()
-if item in doorKeys:
-    print(f"You have the {item} key!\n")
-else:
-    print(f"You do not have the {item} key.\n")
+# doorKeys = [
+#     "red",
+#     "blue",
+#     "green",
+#     "yellow"
+# ]
+# item = input("Which key do you require?\n").lower().upper()
+# if item in doorKeys:
+#     print(f"You have the {item} key!\n")
+# else:
+#     print(f"You do not have the {item} key.\n")
 
 
 # Random Enemy Generator
+
+ememyBase = [
+    "Goblin",
+    "Dragon",
+    "Zombie",
+    "Gnome",
+    "Troll"
+]
+
+ememyType = [
+    "Warrior",
+    "Wizard",
+    "Assassin",
+    "Berserker",
+    "Paladin"
+]
+
+ememyPrefix = [
+    "Fire-Breathing",
+    "Gargantuan",
+    "Invisible",
+    "Vampiric",
+    "Exploding"
+]
+
