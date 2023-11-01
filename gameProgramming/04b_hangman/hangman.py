@@ -53,6 +53,11 @@ def getRandomWord(wordList):
     #print(wordIndex)
     return wordList[wordIndex]
 
+def displayBoard(incorrectLetters, correctLetters, secretWord):
+    print(HANGMAN_BOARD[len(incorrectLetters)])
+    print()
+
+
 # i = 0
 # while i < 50:
 #     getRandomWord(wordList)

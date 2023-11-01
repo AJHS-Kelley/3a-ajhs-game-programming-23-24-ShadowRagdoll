@@ -31,7 +31,17 @@ if input == "look around":
                     print("A death stare.\n")
                     print("Your Body Was Never Found Ending\n")
                 else:
-                    if input
+                    if input == "talk to them":
+                        print("You go up to him to talk.\n")
+                        print("He knows you took his box and he says that box meant a lot to him and how you just stole his property,\n")
+                        print("You try to defend yourself, saying how you needed a table, but the thing is you had a table and you somehow forgot about it and placed the box over your table.\n")
+                        print("As if you couldn't even see what your own living room looked like or something.\n")
+                        print("The neighbor states that he is going to take you to court.\n")
+                        print("That you are going to lose a lot of money and even if you don't it's still gonna be a huge inconvenience for you and be stressful.\n")
+                        print("Court Issues Ending\n")
+                    else:
+                        print("Please type talk to them or run for your selection.\n")
+                        fifthChoice = input("should you talk to them or run?\n")
             else:
                 if input == "make it your home":
                     print("You decide that you don't want to work, ever again.\n")
@@ -49,8 +59,7 @@ if input == "look around":
             print("Well, good job for just doing the bare minimum and not being stupid or being unlucky.\n")
             print("You made it though a single day in your life, good job.\n")
             print("Good ending")
-        else:
-
+       else:          
 else:
     if input == "leave for work":
         print("You now stand by your car.\n")
