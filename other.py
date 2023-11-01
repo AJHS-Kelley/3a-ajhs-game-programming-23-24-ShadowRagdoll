@@ -19,8 +19,10 @@ if input == "look around":
             print("You now have a box. What should you do with it?\n")
             fouthChoice = input("Make it your new table or make it your home?\n")
             if input == "make it your new table":
-                print("You take it inside and")
-
+                print("You take it inside and make it your new table, but when you go back outside you see the neighbor giving you the scariness stare you have ever seen.\n")
+                print("A death stare, it looks like he might actually kill you.\n")
+            else:
+                if input == "make it "
         else:
             print("You now stand by your car.\n")
     else:
