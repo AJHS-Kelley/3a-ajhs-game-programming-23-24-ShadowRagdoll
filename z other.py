@@ -59,7 +59,12 @@ if input == "look around":
             print("Well, good job for just doing the bare minimum and not being stupid or being unlucky.\n")
             print("You made it though a single day in your life, good job.\n")
             print("Good ending")
-       else:          
+        else:          
+            if input == "drive to work":
+                print("You when to work but you didn't get ready at all.\n")
+                print("Now it will probably be a funny story that will forever live in the office.\n")
+                print("The story of how someone managed to forget to get ready.\n")
+                print("Fired Ending\n")
 else:
     if input == "leave for work":
         print("You now stand by your car.\n")
