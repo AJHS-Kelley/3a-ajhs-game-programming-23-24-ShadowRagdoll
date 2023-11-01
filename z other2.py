@@ -30,8 +30,7 @@ if input == "look around":
                     print("She gives you the exact same kind of stare as the other neighbor.\n")
                     print("A death stare.\n")
                     print("Your Body Was Never Found Ending\n")
-                else:
-                    if input == "talk to them":
+                elif input == "talk to them":
                         print("You go up to him to talk.\n")
                         print("He knows you took his box and he says that box meant a lot to him and how you just stole his property,\n")
                         print("You try to defend yourself, saying how you needed a table, but the thing is you had a table and you somehow forgot about it and placed the box over your table.\n")
@@ -39,7 +38,7 @@ if input == "look around":
                         print("The neighbor states that he is going to take you to court.\n")
                         print("That you are going to lose a lot of money and even if you don't it's still gonna be a huge inconvenience for you and be stressful.\n")
                         print("Court Issues Ending\n")
-                    else:
+                else:
                         print("Please type talk to them or run for your selection.\n")
                         fifthChoice = input("should you talk to them or run?\n")
             else:
