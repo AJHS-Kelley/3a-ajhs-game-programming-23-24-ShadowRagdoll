@@ -1,8 +1,13 @@
-firstChoice = ""
-secChoice = ""
-thirdChoice = ""
-fouthChoice = ""
-fifthChoice = ""
+firstChoice = input()
+firstChoice = firstChoice.lower()
+secChoice = input()
+secChoice = secChoice.lower()
+thirdChoice = input()
+thirdChoice = thirdChoice.lower()
+fouthChoice = input()
+fouthChoice = fouthChoice.lower()
+fifthChoice = input()
+fifthChoice = fifthChoice.lower()
 youReady = 0
 print("Welcome to a normal day of life.\n")
 print("You wake up in your room.\n")
@@ -67,7 +72,7 @@ if firstChoice == "look around":
 else:
     if firstChoice == "leave for work":
         print("You now stand by your car.\n")
-        secChoice = input("Should you look around or drive to work?\n")
+        return secChoice
     else: 
         print("Please type look around or leave for work for your selection.\n")
         firstChoice = input("Should you look around or leave for work?\n")

@@ -13,24 +13,24 @@ if firstChoice == "look around":
     youReady += 1
     print("You now stand by your car.\n")
     secChoice = input("Should you look around or drive to work?\n")
-    if input == "look around":
+    if secChoice == "look around":
         print("You see that the neighors yard has a big box.\n")
         thirdChoice = input("Do you want to take it or leave it?\n")
-        if input == "take it":
+        if thirdChoice == "take it":
             print("You now have a box. What should you do with it?\n")
             fouthChoice = input("Make it your new table or make it your home?\n")
-            if input == "make it your new table":
+            if fouthChoice == "make it your new table":
                 print("You take it inside and make it your new table, but when you go back outside you see the neighbor giving you the scariness stare you have ever seen.\n")
                 print("A death stare, it looks like he might actually kill you.\n")
                 fifthChoice = input("should you talk to them or run?\n")
-                if input == "run":
+                if fifthChoice == "run":
                     print("You run as fast as you can away from him.\n")
                     print("You look back as you are running to check to see if he is behind you.\n")
                     print("When you do this though you bump into another neighbor.\n")
                     print("She gives you the exact same kind of stare as the other neighbor.\n")
                     print("A death stare.\n")
                     print("Your Body Was Never Found Ending\n")
-                elif input == "talk to them":
+                elif fifthChoice == "talk to them":
                         print("You go up to him to talk.\n")
                         print("He knows you took his box and he says that box meant a lot to him and how you just stole his property,\n")
                         print("You try to defend yourself, saying how you needed a table, but the thing is you had a table and you somehow forgot about it and placed the box over your table.\n")
@@ -42,7 +42,7 @@ if firstChoice == "look around":
                         print("Please type talk to them or run for your selection.\n")
                         fifthChoice = input("should you talk to them or run?\n")
             else:
-                if input == "make it your home":
+                if fouthChoice == "make it your home":
                     print("You decide that you don't want to work, ever again.\n")
                     print("All you had to do was go to work so you can get money for rent, but you gave up and decided to live in a box.\n")
                     print("At least it's rent free.\n")
@@ -53,19 +53,19 @@ if firstChoice == "look around":
         else:
             print("You now stand by your car.\n")
     else:
-        if input == "drive to work" and youReady == 1:
+        if secChoice == "drive to work" and youReady == 1:
             print("You when to work. Everything was a normal day.\n")
             print("Well, good job for just doing the bare minimum and not being stupid or being unlucky.\n")
             print("You made it though a single day in your life, good job.\n")
             print("Good ending")
         else:          
-            if input == "drive to work":
+            if secChoice == "drive to work":
                 print("You when to work but you didn't get ready at all.\n")
                 print("Now it will probably be a funny story that will forever live in the office.\n")
                 print("The story of how someone managed to forget to get ready.\n")
                 print("Fired Ending\n")
 else:
-    if input == "leave for work":
+    if firstChoice == "leave for work":
         print("You now stand by your car.\n")
         secChoice = input("Should you look around or drive to work?\n")
     else: 
