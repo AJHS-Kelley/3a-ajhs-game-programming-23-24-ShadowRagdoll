@@ -53,13 +53,11 @@ if input == "look around":
                     fouthChoice = input("Make it your new table or make it your home?\n")
         else:
             print("You now stand by your car.\n")
-    else:
-        if input == "drive to work" and youReady == 1:
+    elif input == "drive to work" and youReady == 1:
             print("You when to work. Everything was a normal day.\n")
             print("Well, good job for just doing the bare minimum and not being stupid or being unlucky.\n")
             print("You made it though a single day in your life, good job.\n")
-            print("Good ending")
-       else:          
+            print("Good ending")   
 else:
     if input == "leave for work":
         print("You now stand by your car.\n")
