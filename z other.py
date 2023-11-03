@@ -7,7 +7,7 @@ youReady = 0
 print("Welcome to a normal day of life.\n")
 print("You wake up in your room.\n")
 firstChoice = input("Should you look around or leave for work?\n")
-if input == "look around":
+if firstChoice == "look around":
     print("You look around your room and see things like a hair brush, clothes, along with other things and you realize that you have to get ready and go to work.\n")
     print("So you get ready.\n")
     youReady += 1
@@ -30,8 +30,7 @@ if input == "look around":
                     print("She gives you the exact same kind of stare as the other neighbor.\n")
                     print("A death stare.\n")
                     print("Your Body Was Never Found Ending\n")
-                else:
-                    if input == "talk to them":
+                elif input == "talk to them":
                         print("You go up to him to talk.\n")
                         print("He knows you took his box and he says that box meant a lot to him and how you just stole his property,\n")
                         print("You try to defend yourself, saying how you needed a table, but the thing is you had a table and you somehow forgot about it and placed the box over your table.\n")
@@ -39,7 +38,7 @@ if input == "look around":
                         print("The neighbor states that he is going to take you to court.\n")
                         print("That you are going to lose a lot of money and even if you don't it's still gonna be a huge inconvenience for you and be stressful.\n")
                         print("Court Issues Ending\n")
-                    else:
+                else:
                         print("Please type talk to them or run for your selection.\n")
                         fifthChoice = input("should you talk to them or run?\n")
             else:
@@ -53,13 +52,11 @@ if input == "look around":
                     fouthChoice = input("Make it your new table or make it your home?\n")
         else:
             print("You now stand by your car.\n")
-    elif input == "drive to work" and youReady == 1:
+    else:
+        if input == "drive to work" and youReady == 1:
             print("You when to work. Everything was a normal day.\n")
             print("Well, good job for just doing the bare minimum and not being stupid or being unlucky.\n")
             print("You made it though a single day in your life, good job.\n")
-<<<<<<< HEAD:other.py
-            print("Good ending")   
-=======
             print("Good ending")
         else:          
             if input == "drive to work":
@@ -67,7 +64,6 @@ if input == "look around":
                 print("Now it will probably be a funny story that will forever live in the office.\n")
                 print("The story of how someone managed to forget to get ready.\n")
                 print("Fired Ending\n")
->>>>>>> 7e838744001e3ca2ed5027bf287b623f24df8b02:z other.py
 else:
     if input == "leave for work":
         print("You now stand by your car.\n")
@@ -75,10 +71,3 @@ else:
     else: 
         print("Please type look around or leave for work for your selection.\n")
         firstChoice = input("Should you look around or leave for work?\n")
-
-
-
-
-
-    
-

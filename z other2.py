@@ -7,7 +7,7 @@ youReady = 0
 print("Welcome to a normal day of life.\n")
 print("You wake up in your room.\n")
 firstChoice = input("Should you look around or leave for work?\n")
-if input == "look around":
+if firstChoice == "look around":
     print("You look around your room and see things like a hair brush, clothes, along with other things and you realize that you have to get ready and go to work.\n")
     print("So you get ready.\n")
     youReady += 1
