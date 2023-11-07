@@ -72,7 +72,7 @@ if firstChoice == "look around":
 else:
     if firstChoice == "leave for work":
         print("You now stand by your car.\n")
-        return secChoice
+        
     else: 
         print("Please type look around or leave for work for your selection.\n")
         firstChoice = input("Should you look around or leave for work?\n")
