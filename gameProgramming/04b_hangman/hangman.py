@@ -133,8 +133,16 @@ while True: # 99% of the time the loop is done this way.
       print('You have lost due to using all guesses.\n')
       print('The secret word was ' + secretWord)
       gameIsDone = True
-       
-    
+      
+  if gameIsDone:
+    if playAgain(): 
+      secretWord = getRandomWord(wordList)
+      missedLetters = ''
+      correctLetters = ''
+      gameIsDone = False
+    else:
+      break
+
      
     
 
