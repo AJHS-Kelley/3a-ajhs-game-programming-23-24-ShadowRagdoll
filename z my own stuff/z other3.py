@@ -6,7 +6,7 @@ running = True
 while running:
     print("Welcome to a normal day of life.\n")
     print("You wake up in your room.\n")
-    playerChoice = input("Should you look around your room or leave for work?\n")
+    playerChoice = input("Should you [look around your room] or [leave for work]?\n")
     while playerChoice not in CHOICES:
         playerChoice = input("Please type exactly like one of the options above.")
         
@@ -15,17 +15,17 @@ while running:
         print("So you get ready.\n")
         youReady += 1
         print("You now stand by your car.\n")
-        playerChoice = input("Should you look around or drive to work?\n")
+        playerChoice = input("Should you [look around] or [drive to work]?\n")
         if playerChoice == "look around":
             print("You see that the neighors yard has a big box.\n")
-            playerChoice = input("Do you want to take it or leave it?\n")
+            playerChoice = input("Do you want to [take it] or [leave it]?\n")
             if playerChoice == "take it":
                 print("You now have a box. What should you do with it?\n")
-                playerChoice = input("Make it your new table or make it your home?\n")
+                playerChoice = input("[Make it your new table] or [make it your home]?\n")
                 if playerChoice == "make it your new table":
                     print("You take it inside and make it your new table, but when you go back outside you see the neighbor giving you the scariness stare you have ever seen.\n")
                     print("A death stare, it looks like he might actually kill you.\n")
-                    playerChoice = input("should you talk to them or run?\n")
+                    playerChoice = input("should you [talk to them] or [run]?\n")
                     if playerChoice == "run":
                         print("You run as fast as you can away from him.\n")
                         print("You look back as you are running to check to see if he is behind you.\n")
