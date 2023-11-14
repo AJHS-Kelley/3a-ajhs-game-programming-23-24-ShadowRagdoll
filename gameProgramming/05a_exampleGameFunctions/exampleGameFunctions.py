@@ -16,12 +16,21 @@ def functionOne(numberSkill, listTypes):
             print("Hit")
         else:
             print("Miss")
-    elif numberSkill > 90 and listTypes == "idk" and otherStuff == "bit" and what == "ahh":
+    elif numberSkill > 80 and listTypes == "idk" and otherStuff == "bit" and what == "ahh":
         sfk = random.randint(0, 100)
         if sfk > 50:
             print("Hit")
         else:
             print("Miss")
+    else:
+        print("end")
+
+functionOne(95, "idk", "bit", "?")
+functionOne(35, "idk", "bit", "ahh")
+
+def coinFlip():
+    coinFlip = random.ranint(1, 2)
+    if coinFlip
 
 def functionTwo():
     pass
