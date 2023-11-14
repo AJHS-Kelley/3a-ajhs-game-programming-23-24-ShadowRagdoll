@@ -71,4 +71,3 @@ while running:
         if playerChoice == "leave for work":
             print("You now stand by your car.\n")
                 
-        
