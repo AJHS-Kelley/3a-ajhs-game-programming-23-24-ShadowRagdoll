@@ -30,7 +30,7 @@ functionOne(35, "idk", "bit", "ahh")
 
 def coinFlip():
     coinFlip = random.ranint(1, 2)
-    if coinFlip
+    
 
 def functionTwo():
     pass

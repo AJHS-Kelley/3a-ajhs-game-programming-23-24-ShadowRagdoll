@@ -2,7 +2,7 @@ CHOICES = ["look around", "leave for work", "look around your room", "drive to w
 youReady = 0
 playerChoice = ""
 running = True
-
+carChoose = False
 while running:
     print("Welcome to a normal day of life.\n")
     print("You wake up in your room.\n")
@@ -68,6 +68,10 @@ while running:
                     print("The story of how someone managed to forget to get ready.\n")
                     print("Fired Ending\n")
     else:
-        if playerChoice == "leave for work":
+        def notReady():
             print("You now stand by your car.\n")
+            return input(playerChoice).lower
+        if carChoose:
+            if notReady:
+                carChoose = False
                 
