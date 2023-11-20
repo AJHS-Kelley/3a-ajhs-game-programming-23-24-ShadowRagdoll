@@ -2,17 +2,20 @@
 import random
 
 # variables
-possibleGuess = 'even odd'.split
-
+possibleGuess = 'even odd'.split()
+#print(possibleGuess)
 def randomNumber():
     randomNumber = random.randint(1, 36)
+    return randomNumber
 
-def getGuess():
+def getGuess(possibleGuess):
     while True:
         print("Even or odd?\n")
         guess = input()
-        guess = guess.lower
-        if guess != possibleGuess:
+        guess = guess.lower()
+        #print("getGuessDEBUG")
+        #print(guess)
+        if guess not in possibleGuess:
             print("Please type in even or odd.\n")
         else:
             return guess
@@ -32,9 +35,9 @@ def didWin():
 print("Let's get a gambling addiction!\n")
 print("You walk up to the roulette.\n")
 while True:
-    guess = getGuess()
-    randomNumber()
-    if randomNumber % 2 == 0:
+    guess = getGuess(possibleGuess)
+    num = randomNumber()
+    if num % 2 == 0:
         print("Even")
     else:
         print("Odd")
