@@ -49,7 +49,6 @@ print(-10 > -5 or 15 < 10) # (False or False) == False
 
 # not -- 'opposite' value
 favColor = "green"
-print(favColor == not "blue")
 
 print(4 > 3 and 1 != 2 and 5 < 3) 
 # True and True and False 
