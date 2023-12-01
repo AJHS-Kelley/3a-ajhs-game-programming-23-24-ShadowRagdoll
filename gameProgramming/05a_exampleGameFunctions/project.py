@@ -6,7 +6,7 @@ import random
 possibleGuess = 'even odd'.split()
 #print(possibleGuess)
 def randomNumber():
-    randomNumber = random.randint(1, 36)
+    randomNumber = random.randint(1, 2)
     return randomNumber
 
 def getGuess(possibleGuess):
@@ -25,7 +25,7 @@ def playAgain():
     print('Do you want to play again? Yes or No, then press enter.')
     return input().lower().startswith('y') # return True/False based on input
 
-def didWin():
+def didWin(guess):
     if guess == randomNumber:
         print("You won a bunch of money!")
     else:
@@ -42,5 +42,5 @@ while True:
         print("Even")
     else:
         print("Odd")
-    didWin()
+    didWin(guess)
     playAgain()
