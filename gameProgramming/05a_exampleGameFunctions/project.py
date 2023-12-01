@@ -1,4 +1,5 @@
 # project, Lily King, v0.0
+#Code Reviewed By Eliot Blanton
 import random
 
 # variables
