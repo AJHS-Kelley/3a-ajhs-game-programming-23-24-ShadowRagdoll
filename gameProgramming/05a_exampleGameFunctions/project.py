@@ -25,8 +25,8 @@ def playAgain():
     print('Do you want to play again? Yes or No, then press enter.')
     return input().lower().startswith('y') # return True/False based on input
 
-def didWin(guess):
-    if guess == randomNumber:
+def didWin():
+    if guess == randomNumber: #try replacing randomNumber with a check for if the number being even/odd matches the guess
         print("You won a bunch of money!")
     else:
         guess != randomNumber
