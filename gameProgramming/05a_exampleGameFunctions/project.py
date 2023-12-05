@@ -42,5 +42,5 @@ while True:
         print("Even")
     else:
         print("Odd")
-    didWin(guess)
+    didWin()
     playAgain()
