@@ -27,9 +27,9 @@ class Person: # Class names should be PascalCase
 
     def tooTall(self):
         print("Hello, this function will determine if you are too tall to ride.\n")
-        print("If you are taller than 25 years, you cannot ride this ride.\n")
-        if self.age > 25:
-            print("You are too old, go find a different ride.\n")
+        print("If you are taller than 6.0, you cannot ride this ride.\n")
+        if self.height == "6'2\"":
+            print("You are too tall, go find a different ride.\n")
         else:
             print("Welcome aboard!\n")
 
@@ -40,6 +40,8 @@ examplePerson2 = Person(90, "6'2\"", "brown", "Bop", 170, "July 06")
 
 examplePerson.tooOld()
 examplePerson2.tooOld()
+examplePerson.tooTall()
+examplePerson2.tooTall()
 #print(examplePerson)
 
 # Changing Properties After Creating Object
