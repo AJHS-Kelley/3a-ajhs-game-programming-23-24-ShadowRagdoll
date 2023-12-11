@@ -15,15 +15,37 @@ class Person: # Class names should be PascalCase
     def __str__(self):
         return f"{self.name} is {self.age} years old. \nThey have {self.hairColor} hair and weigh {self.weight} pounds. \nThey were born on {self.birthday} and stands {self.height} tall."
 
+
+# Functions In A Class
+    def tooOld(self):
+        print("Hello, this function will determine if you are too old to ride.\n")
+        print("If you are older than 25 years, you cannot ride this ride.\n")
+        if self.age > 25:
+            print("You are too old, go find a different ride.\n")
+        else:
+            print("Welcome aboard!\n")
+
+    def tooTall(self):
+        print("Hello, this function will determine if you are too tall to ride.\n")
+        print("If you are taller than 25 years, you cannot ride this ride.\n")
+        if self.age > 25:
+            print("You are too old, go find a different ride.\n")
+        else:
+            print("Welcome aboard!\n")
+
 # A class is a 'blueprint' to make an object.
 
 examplePerson = Person(6, "6'2\"", "black", "Pop", 70, "April 06")
 examplePerson2 = Person(90, "6'2\"", "brown", "Bop", 170, "July 06")
-print(examplePerson)
-print(examplePerson.name)
-print(examplePerson.age)
-print(examplePerson.height)
 
-print(examplePerson2.name)
-print(examplePerson2.hairColor)
-print(examplePerson2.age)
+examplePerson.tooOld()
+examplePerson2.tooOld()
+#print(examplePerson)
+
+# Changing Properties After Creating Object
+print(examplePerson.birthday)
+examplePerson2.birthday = "June 27"
+print(examplePerson2.birthday)
+
+
+
