@@ -17,14 +17,6 @@ class Person: # Class names should be PascalCase
 
 
 # Functions In A Class
-    def tooOld(self):
-        print("Hello, this function will determine if you are too old to ride.\n")
-        print("If you are older than 25 years, you cannot ride this ride.\n")
-        if self.age > 25:
-            print("You are too old, go find a different ride.\n")
-        else:
-            print("Welcome aboard!\n")
-
     def tooTall(self):
         print("Hello, this function will determine if you are too tall to ride.\n")
         print("If you are taller than 6.0, you cannot ride this ride.\n")
@@ -38,8 +30,6 @@ class Person: # Class names should be PascalCase
 examplePerson = Person(6, "6'2\"", "black", "Pop", 70, "April 06")
 examplePerson2 = Person(90, "6'2\"", "brown", "Bop", 170, "July 06")
 
-examplePerson.tooOld()
-examplePerson2.tooOld()
 examplePerson.tooTall()
 examplePerson2.tooTall()
 #print(examplePerson)
@@ -50,4 +40,18 @@ examplePerson2.birthday = "June 27"
 print(examplePerson2.birthday)
 
 
+## Deleting Properites from Objects
+#print(examplePerson.name)
+#del examplePerson.name
+#print(examplePerson.name)
+## del COMPLETELY removes the property.
+
+# Deleing Whole Objects
+print(examplePerson2)
+del examplePerson2
+print(examplePerson2)
+# Delete objects that are no longer needed to free up memory.
+
+class Food:
+    pass # I am not done yet, don't freak out
 
