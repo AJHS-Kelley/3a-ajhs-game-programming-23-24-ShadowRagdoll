@@ -1,6 +1,5 @@
 # Classes and Objects, Lily King, v0.0
 
-
 class Person: # Class names should be PascalCase
     def __init__(self, age, height, hairColor, name, weight, birthday):
         # The self keyword refers to the specific object you are dealing with.
@@ -24,6 +23,7 @@ class Person: # Class names should be PascalCase
             print("You are too tall, go find a different ride.\n")
         else:
             print("Welcome aboard!\n")
+
 
 # A class is a 'blueprint' to make an object.
 
