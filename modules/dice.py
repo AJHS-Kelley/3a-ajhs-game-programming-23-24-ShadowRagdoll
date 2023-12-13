@@ -27,6 +27,7 @@ def isExploding(roll, sizeRoll):
         isExploding = False
     return isExploding
 
+# Confirmed Working as of 12-13-23
 def isDouble(roll1, roll2):
     if roll1 == roll2:
         isDouble = True
@@ -38,9 +39,5 @@ roll1 = rollDice(1, 6)
 roll2 = rollDice(1, 6)
 print(f"roll1 is {roll1} and roll2 is {roll2}.")
 
-if isDouble(roll1, roll2):
-    print("It's a double!\n")
-    
-else:
-    print("Womp womp. Not a double.\n")
+
 
