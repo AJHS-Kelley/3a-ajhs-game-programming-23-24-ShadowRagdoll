@@ -1,5 +1,7 @@
+# Dice Roll Module by Lily King, v1.0
 import random
 
+# Works 12-13-23
 def rollDice(numRoll, sizeRoll):
     count = 0
     sum = 0
@@ -9,6 +11,7 @@ def rollDice(numRoll, sizeRoll):
         count += 1
     return sum
 
+# Works 12-13-23
 def rollDicePrint(numRoll, sizeRoll):
     count = 0
     sum = 0
@@ -20,6 +23,7 @@ def rollDicePrint(numRoll, sizeRoll):
     print(f"The sum is {sum}.\n")
     return sum
 
+# Work as if 12-13-23
 def isExploding(roll, sizeRoll):
     if roll == sizeRoll:
         isExploding = True
@@ -38,6 +42,4 @@ def isDouble(roll1, roll2):
 roll1 = rollDice(1, 6)
 roll2 = rollDice(1, 6)
 print(f"roll1 is {roll1} and roll2 is {roll2}.")
-
-
 
