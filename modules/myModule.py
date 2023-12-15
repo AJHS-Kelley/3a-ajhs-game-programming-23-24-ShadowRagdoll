@@ -39,20 +39,11 @@ def isDouble(roll1, roll2):
         isDouble = False
     return isDouble
 
-
 def getTime():
     return time.time()
 
 def execTime(start, stop):
     return f"Execution Time: {stop - start} seconds.\n"
 
-def memStart():
-    return tracemalloc.start()
-
-def memStop():
-    return tracemalloc.stop()
-
-def memUsage(start, stop):
-    return f"Current Memory Usage: {start}\n Highest Memory Usage: {stop}\n"
 
 
