@@ -1,5 +1,5 @@
 # Dice Roll Module by Lily King, v1.0
-import random, time
+import random, time, tracemalloc
 
 # Works 12-13-23
 def rollDice(numRoll, sizeRoll):
@@ -46,5 +46,13 @@ def getTime():
 def execTime(start, stop):
     return f"Execution Time: {stop - start} seconds.\n"
 
+def memStart():
+    return tracemalloc.start()
+
+def memStop():
+    return tracemalloc.stop()
+
+def memUsage(start, stop):
+    return f"Current Memory Usage: {start}\n Highest Memory Usage: {stop}\n"
 
 
