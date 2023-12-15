@@ -1,5 +1,5 @@
 # Dice Roll Module by Lily King, v1.0
-import random
+import random, time
 
 # Works 12-13-23
 def rollDice(numRoll, sizeRoll):
@@ -12,7 +12,7 @@ def rollDice(numRoll, sizeRoll):
     return sum
 
 # Works 12-13-23
-def rollDicePrint(numRoll, sizeRoll):
+def disDice(numRoll, sizeRoll):
     count = 0
     sum = 0
     while count < numRoll:
@@ -39,7 +39,12 @@ def isDouble(roll1, roll2):
         isDouble = False
     return isDouble
 
-roll1 = rollDice(1, 6)
-roll2 = rollDice(1, 6)
-print(f"roll1 is {roll1} and roll2 is {roll2}.")
+
+def getTime():
+    return time.time()
+
+def execTime(start, stop):
+    return f"Execution Time: {stop - start} seconds.\n"
+
+
 
