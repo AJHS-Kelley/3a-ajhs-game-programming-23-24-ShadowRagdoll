@@ -20,5 +20,20 @@ def genDNA() -> str:
         basesGenerated += 1
     return dnaSequence
 
-#dna = genDNA()
-#print(dna)
+def genRNA(dnaSequence: str) -> tuple:
+    print(f"The DNA Sequence is {dnaSequence}.\n")
+    print("You need to enter the correct RNA sequence based on this DNA sequence.\n")
+    print("Remember, the RNA base will have a U base to match with an A base from DNA.\n")
+    # START TIMER
+    rnaStart = time.time()
+    rnaSequence = input("Please type the correct RNA sequence with no spaces. Then press enter.\n")
+    rnaStop = time.time()
+    rnaTime = rnaStop - rnaStart
+    return (ranSequence, rnaTime) # Tuples are ORDERED (index), UNCHANGEABLE, Allows Duplicates
+
+
+dna = genDNA()
+print(dna)
+
+rna = genRNA(dna)
+print(rna)
