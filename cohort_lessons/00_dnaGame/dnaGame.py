@@ -9,7 +9,8 @@ from random import choice # BEING JUST THE TOOL YOU NEED
 dnaBases = ["A", "T", "G", "C"] # Adenine, Thymine, Guanine, Cyto
 
 def gameIntro() -> None:
-    pass
+    print("Welcome to the dna game.\n")
+    print("You are going to match the dna bases to their rna bases.\n")
 
 def genDNA() -> str:
     basesGenerated = 0
