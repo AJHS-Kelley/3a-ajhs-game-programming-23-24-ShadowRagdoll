@@ -49,11 +49,11 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
 def calcScore(time: float, dnaSequence: str) -> int: 
     score = 0
     if time < 1.0:
-        score += 10000 # HIGHEST POSSIBLE POINTS AWARDED HERE
+        score += 10 # HIGHEST POSSIBLE POINTS AWARDED HERE
+    elif time < 10.0:
+        score += 5
     elif time :
-        score += ?
-    elif time :
-        score += ?
+        score += 20.0
     else:
         # LOWEST POSSIBLE POINTS AWARDED HERE
 
