@@ -29,8 +29,21 @@ def genRNA(dnaSequence: str) -> tuple:
     rnaSequence = input("Please type the correct RNA sequence with no spaces. Then press enter.\n")
     rnaStop = time.time()
     rnaTime = rnaStop - rnaStart
-    return (ranSequence, rnaTime) # Tuples are ORDERED (index), UNCHANGEABLE, Allows Duplicates
+    return (rnaSequence, rnaTime) # Tuples are ORDERED (index), UNCHANGEABLE, Allows Duplicates
 
+def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
+    isMatch = False
+    for eachBase in rnaSequence:
+        if eachBase == "U" and dnaSequence != "T":
+            isMatch = False
+            break
+        elif eachBase == "C" and dnaSequence != "G":
+            isMatch = False
+        elif 
+        elif
+        else:
+            isMatch = True
+    return isMatch
 
 dna = genDNA()
 print(dna)
