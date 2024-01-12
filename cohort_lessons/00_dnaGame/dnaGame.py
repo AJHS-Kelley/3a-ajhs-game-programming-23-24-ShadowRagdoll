@@ -6,18 +6,17 @@ import time, datetime # BRING THE WHOLE TOOL BOX
 # Import Specific Method from a Module
 from random import choice # BEING JUST THE TOOL YOU NEED
 
-dnaBases = ["A", "T", "G", "C"] # Adenine, Thymine, Guanine, Cyto
+dnaBase = ["A", "T", "G", "C"] # Adenine, Thymine, Guanine, Cyto
 
 def gameIntro() -> None:
-    print("Welcome to the dna game.\n")
-    print("You are going to match the dna bases to their rna bases.\n")
+    print("Welcome to the dna game. You are going to match the dna bases to their rna bases.\n")
 
 def genDNA() -> str:
     basesGenerated = 0
     basesRequested = int(input("Please enter a positive integer value for the number of bases to generate.\n"))
     dnaSequence = ""
     while basesGenerated < basesRequested:
-        dnaSequence += choice(dnaBases)
+        dnaSequence += choice(dnaBase)
         basesGenerated += 1
     return dnaSequence
 
@@ -34,18 +33,14 @@ def genRNA(dnaSequence: str) -> tuple:
 
 def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
     isMatch = False
-    for eachBase in rnaSequence:
-        if eachBase == "U" and dnaSequence != "T":
-            isMatch = False
+    for rnaBase, dnaBase in zip(rnaSequence, dnaSequence):
+        if rnaBase == "U" and dnaBase != "T":
             break
-        elif eachBase == "C" and dnaSequence != "G":
-            isMatch = False
+        elif rnaBase == "C" and dnaBase != "G":
             break
-        elif eachBase == "T" and dnaSequence != "A":
-            isMatch = False
+        elif rnaBase == "T" and dnaBase != "A":
             break
-        elif eachBase == "G" and dnaSequence != "C":
-            isMatch = False
+        elif rnaBase == "G" and dnaBase != "C":
             break
         else:
             isMatch = True
@@ -57,5 +52,4 @@ print(dna)
 rna = genRNA(dna)
 print(rna)
 
-right = checkSequence(dna, rna)
-print(right)
+print(checkSequence(dna, rna[0]))
