@@ -20,13 +20,13 @@ def genDNA() -> str:
         basesGenerated += 1
     return dnaSequence
 
-def genRNA(dnaSequence: str) -> tuple:
+def doTransciption(dnaSequence: str) -> tuple:
     print(f"The DNA Sequence is {dnaSequence}.\n")
     print("You need to enter the correct RNA sequence based on this DNA sequence.\n")
     print("Remember, the RNA base will have a U base to match with an A base from DNA.\n")
     # START TIMER
     rnaStart = time.time()
-    rnaSequence = input("Please type the correct RNA sequence with no spaces. Then press enter.\n")
+    rnaSequence = input("Please type the correct RNA sequence with no spaces. Then press enter.\n").upper()
     rnaStop = time.time()
     rnaTime = rnaStop - rnaStart
     return (rnaSequence, rnaTime) # Tuples are ORDERED (index), UNCHANGEABLE, Allows Duplicates
@@ -34,11 +34,11 @@ def genRNA(dnaSequence: str) -> tuple:
 def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
     isMatch = False
     for rnaBase, dnaBase in zip(rnaSequence, dnaSequence):
-        if rnaBase == "U" and dnaBase != "T":
+        if rnaBase == "U" and dnaBase != "A":
             break
         elif rnaBase == "C" and dnaBase != "G":
             break
-        elif rnaBase == "T" and dnaBase != "A":
+        elif rnaBase == "A" and dnaBase != "T":
             break
         elif rnaBase == "G" and dnaBase != "C":
             break
@@ -62,17 +62,41 @@ def calcScore(time: float, dnaSequence: str) -> int:
     # If you want to penalize, make the multiplier < 1.0
 
     if len(dnaSequence) > 25:
+        score *= 3.0
+    elif len(dnaSequence) >= 5:
         score *= 2.0
-    elif len(dnaSequence) >= :
-        score *= ?
     else:
-        score *= ?
+        score *= 0.5
     return score
+
+def saveScore(dna : str, rna : str, rnaTime: float, score : int) -> None:
+    firstName = input("What is your first name?\n")
+    lastName = input("What is your last name?\n")
+    fullName = firstName + " " + lastName
+
+    # Saving Files Example
+    # STEP 1: Create the filename to use for your program.
+    fileName = "dnaReplicationScore" + fullName + ".txt"
+    # My Example: dnaReplicationScoreLilyKing.txt
+    # STEP 2: Open the file 'into' a variable.
+    saveData = open(fileName, "a") # First Param = file name, second param = file mode.
+    # Three Main File Modes
+    # "w" -- CREATE FILE, IF FILE EXISTS, OVERWRITE THE CONTENTS
+    # "a" -- CREATE FILE. IF FILE EXISTS, APPEND TO END OF FILE
+    # "X" -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR MESSAGE
+
+     # STEP 3: Write the data to the file
+    saveData.write("Test Message\n")
+
+    # STEP 4: Close the file.
+    saveData.close()
+
+
+    
 
 dna = genDNA()
 print(dna)
 
-rna = genRNA(dna)
+rna = doTransciption(dna)
 print(rna)
-
 print(checkSequence(dna, rna[0]))
