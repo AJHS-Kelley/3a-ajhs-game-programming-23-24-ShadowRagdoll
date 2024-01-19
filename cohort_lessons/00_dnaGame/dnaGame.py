@@ -46,16 +46,16 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
             isMatch = True
     return isMatch
 
-def calcScore(time: float, dnaSequence: str) -> int: 
+def calcScore(rnaTime: float, dnaSequence: str) -> int: 
     score = 0
-    if time < 1.0:
+    if rnaTime < 1.0:
         score += 10 # HIGHEST POSSIBLE POINTS AWARDED HERE
-    elif time < 10.0:
+    elif rnaTime < 10.0:
         score += 5
-    elif time :
+    elif rnaTime :
         score += 20.0
     else:
-        # LOWEST POSSIBLE POINTS AWARDED HERE
+        score# LOWEST POSSIBLE POINTS AWARDED HERE
 
     # DNA Sequence Length Multiplier
     # If you want to give a bonus, make the multiplier > 1.0
@@ -68,6 +68,15 @@ def calcScore(time: float, dnaSequence: str) -> int:
     else:
         score *= 0.5
     return score
+
+
+
+
+
+
+
+
+
 
 def saveScore(dna : str, rna : str, rnaTime: float, score : int) -> None:
     firstName = input("What is your first name?\n")
@@ -92,11 +101,17 @@ def saveScore(dna : str, rna : str, rnaTime: float, score : int) -> None:
     saveData.close()
 
 
-    
 
+
+# Function Calls
 dna = genDNA()
-print(dna)
-
 rna = doTransciption(dna)
-print(rna)
-print(checkSequence(dna, rna[0]))
+
+if checkSequence(dna, rna[0]):
+    score = calcScore(rna[1], rna[0])
+    saveScore(dna, rna[0], rna[1], score)
+else:
+    print("Your RNA sequence did not correctly match. Try again.\n")
+
+
+
