@@ -1,0 +1,7 @@
+
+Score Generated On: 2024-01-19 12:56:49.513437
+Your name: li ki
+The DNA sequence: TA
+The RNA sequence: AU
+Your time: 6.795084714889526
+Your score: 2.5

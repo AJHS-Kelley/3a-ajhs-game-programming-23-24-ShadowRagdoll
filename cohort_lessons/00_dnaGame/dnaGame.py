@@ -95,7 +95,12 @@ def saveScore(dna : str, rna : str, rnaTime: float, score : int) -> None:
     # "X" -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR MESSAGE
 
      # STEP 3: Write the data to the file
-    saveData.write("Test Message\n")
+    saveData.write(f"\nScore Generated On: {datetime.datetime.now()}\n")
+    saveData.write(f"Your name: {fullName}\n")
+    saveData.write(f"The DNA sequence: {dna}\n")
+    saveData.write(f"The RNA sequence: {rna}\n")
+    saveData.write(f"Your time: {rnaTime}\n")
+    saveData.write(f"Your score: {score}\n")
 
     # STEP 4: Close the file.
     saveData.close()
