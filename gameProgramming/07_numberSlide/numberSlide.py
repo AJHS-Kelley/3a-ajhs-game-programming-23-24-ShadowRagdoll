@@ -11,6 +11,18 @@
 
 # DIVIDE AND CONQUER METHOD -- Break down a larger problem into smaller problems, then solve those.
 
+# MODULE IMPORTS
+import pygame, sys, random
+# sys module gives access to system level functions including open/close programs, etc.
+
+# MODULE IMPORTS -- specific functions!
+from pygame.locals import *
+# this line allows us to call functions directly instead of pygame.function()
+# we can just write function()
+# * in this line is a WILDCARD and means any or all.
+# Example: delete myGameFiles*
+
+
 # BOARD SETUP DATA
 BOARDWIDTH = 4 # COLUMNS
 BOARDHEIGHT = 4 # ROWS
@@ -50,3 +62,27 @@ BASICFONTSIZE = 20 # MEASURED IN PIXELS
 BUTTONCOLOR = WHITE
 BUTTONTEXTCOLOR = BLACK
 MESSAGECOLOR = WHITE 
+
+# MARGINS FOR WINDOW
+XMARGIN = int((WINDOWWIDTH - (TILESIZE * BOARDWIDTH + (BOARDWIDTH -1))) / 2)
+YMARGIN = int((WINDOWHEIGHT - (TILESIZE * BOARDHEIGHT + (BOARDHEIGHT -1))) / 2)
+
+# DIRECTIONAL ASSIGNMENTS
+UP = 'up'
+DOWN = 'down'
+LEFT = 'left'
+RIGHT = 'right'
+
+# Main Game Loop
+def main():
+    # global keyword makes Python use the same variable in entire program.
+    global FPSCLOCK, DISPLAYSURF, BASIC_FONT, RESET_SURF, RESET_RECT, NEW_SURF, NEW_RECT, SOLVE_SURF, SOLVE_RECT
+    # SURF IS THE ABBREVIATON FOR 'SURFACE'
+    # A 'SURFACE' IN PYGAME CAN BE USED TO DRAW GRAPHICS, TEXT, OR SIMPLE COLORS.
+    # THE EASY WAY TO THINK OF THE 'SURFACE' IS A WHITEBOARD.
+
+    # RECT IS THE ABBREVIATION FOR RECTANGLE
+
+    # START THE PYGAME MODULE ITSELF! THIS LINE OF CODE IS REQUIED FOR PYGAME TO WORK!
+
+        pygame.init()
