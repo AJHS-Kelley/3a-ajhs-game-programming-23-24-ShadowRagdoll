@@ -12,7 +12,7 @@
 # DIVIDE AND CONQUER METHOD -- Break down a larger problem into smaller problems, then solve those.
 
 # MODULE IMPORTS
-import pygame, sys, random
+import pygame, sys, random, time
 # sys module gives access to system level functions including open/close programs, etc.
 
 # MODULE IMPORTS -- specific functions!
@@ -86,6 +86,10 @@ def main():
     # START THE PYGAME MODULE ITSELF! THIS LINE OF CODE IS REQUIED FOR PYGAME TO WORK!
 
     pygame.init() # Start the PyGame Module
-    FPSLOCK = pygame.time.clock() # Establish the 'start' to track FPS
+    FPSLOCK = pygame.time.Clock() # Establish the 'start' to track FPS
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT)) # CREATE the game window.
     pygame.display.set_caption('Lily\'s Slider Puzzle Game')
+    time.sleep(5)
+
+
+main()
