@@ -103,8 +103,27 @@ def checkForQuit() -> None:
         terminate() # Terminate the game if a QUIT event is present.
     for event in pygame.event.get(KEYUP): # Triggers when the specific key is RELEASED.
         if event.key == K_ESCAPE: # Trigger if ESC is RELEASED.
+            terminate()
+        pygame.event.post(event) # Put the other events back into the stack of dishes (queue)
 
+def getLeftTopOfTile(tileX: int, tileY: int) -> tuple:
+    left = XMARGIN + (tileX * TILESIZE) + (tileX - 1)
+    top = YMARGIN + (tileY * TILESIZE) + (tileY - 1)
+    return (top, left)
     
+def getSpotClick(board: list, x: int, y: int) -> tuple:
+    for tileX in range(len(board)): # Loop through every tile on x-axis ONCE.
+        for tileY in range(len(board[0])):
+            left, top = getLeftTopOfTile(tileX, tileY) # Tell us where the tile is.
+            tileRect = pygame.Rect(left, top, TILESIZE, TILESIZE)
+            # pygame.Rect(left, top, width, height)
+            if tileRect.collidepoint(x, y): # Does our object hit something at (x, y)?
+            # .collidepoint() is basically Battleship.
+                return (tileX, tileY) # If we 'hit' return the location.
+    return (None, None) # If we 'miss' return None, None.
+
+
+    return (None, None)
 
 
 main()
