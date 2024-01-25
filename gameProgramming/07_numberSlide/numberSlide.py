@@ -88,7 +88,7 @@ def main():
     pygame.init() # Start the PyGame Module
     FPSLOCK = pygame.time.Clock() # Establish the 'start' to track FPS
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT)) # CREATE the game window.
-    pygame.display.set_caption('Lily\'s Slider Puzzle Game')
+    pygame.display.set_caption('Lily\'s Slip Slide')
     time.sleep(5)
 
 
