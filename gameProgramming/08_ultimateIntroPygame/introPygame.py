@@ -19,7 +19,7 @@ while True:
    
     screen.blit(sky_surface,(0,0))
     screen.blit(ground_surface,(0,300))
-    screen.blit(text_surface(300,50))
+    screen.blit(text_surface,(300,50))
 
     pygame.display.update()
     clock.tick(60)
