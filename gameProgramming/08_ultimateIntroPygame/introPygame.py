@@ -7,8 +7,8 @@ pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
 
-sky_surface = pygame.image.load('graphics/Sky.png')
-ground_surface = pygame.image.load('graphics/ground.png')
+sky_surface = pygame.image.load('img/ultPy/Sky.png')
+ground_surface = pygame.image.load('img/ultPy/ground.png')
 text_surface = test_font.render('My game', False, 'Green')
 
 while True:
