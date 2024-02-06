@@ -1,6 +1,11 @@
 import pygame
 from sys import exit
 
+def display_score():
+    current_time = pygame.time.get_ticks()
+    score_surf = test_font
+    print(current_time)
+
 pygame.init()
 screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('Runner')
@@ -11,8 +16,8 @@ game_active = True
 sky_surface = pygame.image.load('img/ultPy/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultPy/ground.png').convert
 
-score_surf = test_font.render('My game', False, (64,64,64))
-score_rect = score_surf.get_rect(center = (400,50))
+#score_surf = test_font.render('My game', False, (64,64,64))
+#score_rect = score_surf.get_rect(center = (400,50))
 
 snail_surf = pygame.image.load('img/ultPy/snail1.png').convert_alpha()
 snail_rect = snail_surf.get_rect(bottomright = (600,300))
@@ -26,6 +31,7 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
+
         if game_active:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
@@ -37,13 +43,15 @@ while True:
         else:
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 game_active = True
+                snail_rect.left = 800
 
     if game_active:
         screen.blit(sky_surface,(0,0))
         screen.blit(ground_surface,(0,300))
-        pygame.draw.rect(screen,'#c0e8ec',score_rect)
-        pygame.draw.rect(screen,'#c0e8ec',score_rect,10)
-        screen.blit(score_surf,score_rect)
+        #pygame.draw.rect(screen,'#c0e8ec',score_rect)
+        #pygame.draw.rect(screen,'#c0e8ec',score_rect,10)
+        #screen.blit(score_surf,score_rect)
+        display_score()
         
         snail_rect.x -= 4
         if snail_rect.right <= 0: snail_rect.left = 800
