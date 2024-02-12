@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any # 3:38:13 video time
 import pygame
 from sys import exit
 from random import randint
@@ -119,7 +119,7 @@ score = 0
 
 # Groups
 player = pygame.sprite.GroupSingle()
-player.add(player())
+player.add(Player())
 
 obstacle_group = pygame.sprite.Group()
 
@@ -244,7 +244,7 @@ while True:
         # obstacle_rect_list = obstacle_movement(obstacle_rect_list)
 
         # collision
-        game_active = collisions(player_rect,obstacle_rect_list)
+        # game_active = collisions(player_rect,obstacle_rect_list)
 
     else:
         screen.fill((94,129,162))
