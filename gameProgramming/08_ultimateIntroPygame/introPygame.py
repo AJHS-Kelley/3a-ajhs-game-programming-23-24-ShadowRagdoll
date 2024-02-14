@@ -1,7 +1,6 @@
-from typing import Any # 3:38:13 video time
 import pygame
 from sys import exit
-from random import randint
+from random import randint, choice
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -13,13 +12,17 @@ class Player(pygame.sprite.Sprite):
         self.player_jump = pygame.image.load('img/ultPy/jump.png').convert_alpha()
 
         self.image = self.player_walk[self.player_index]
-        self.rect = self.image.get_rect(midbottom = (200,300))
+        self.rect = self.image.get_rect(midbottom = (80,300))
         self.gravity = 0
+
+        self.jump_sound = pygame.mixer.Sound('sfx/ultPy/jump.mp3')
+        self.jump_sound.set_volume(0.5)
 
     def player_input(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE] and self.rect.bottom >= 300:
             self.gravity = -20
+            self.jump_sound.play()
 
     def apply_gravity(self):
         self.gravity += 1
@@ -39,6 +42,7 @@ class Player(pygame.sprite.Sprite):
         self.player_input()
         self.apply_gravity()
         self.animation_state()
+
 class Obstacle(pygame.sprite.Sprite):
     def __int__(self,type):
         super().__int__()
@@ -72,6 +76,7 @@ class Obstacle(pygame.sprite.Sprite):
         if self.rect.x <= - 100:
             self.kill()
 
+
 def display_score():
     current_time = int(pygame.time.get_ticks() / 1000) - start_time
     score_surf = test_font.render(f'Score: {current_time}',False,(64,64,64))
@@ -98,6 +103,12 @@ def collisions(player,obstacles):
             if player.colliderect(obstacle_rect): return False
     return True
 
+def collision_sprite():
+    if pygame.sprite.spritecollide(player.sprite,obstacle_group,False):
+        obstacle_group.empty()
+        return False
+    else: return True
+
 def player_animation():
     global player_surf, player_index
 
@@ -105,17 +116,19 @@ def player_animation():
         player_surf = player_jump
     else:
         player_index += 0.1
-        if player_index >= len(player_walk):
-            player_surf = player_walk[int(player_index)]
+        if player_index >= len(player_walk):player_index = 0
+        player_surf = player_walk[int(player_index)]
 
 pygame.init()
 screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
-game_active = True
+game_active = False
 start_time = 0
 score = 0
+bg_music = pygame.mixer.Sound('sfx/ultPy/music.wav')
+bg_music.play(loops = -1)
 
 # Groups
 player = pygame.sprite.GroupSingle()
@@ -148,7 +161,7 @@ obstacle_rect_list = []
 
 player_walk_1 = pygame.image.load('img/ultPy/player_walk_1.png').convert_alpha()
 player_walk_2 = pygame.image.load('img/ultPy/player_walk_2.png').convert_alpha()
-player_walk = [player_walk_2,player_walk_2]
+player_walk = [player_walk_1,player_walk_2]
 player_index = 0
 player_jump = pygame.image.load('img/ultPy/jump.png').convert_alpha()
 
@@ -244,6 +257,7 @@ while True:
         # obstacle_rect_list = obstacle_movement(obstacle_rect_list)
 
         # collision
+        game_active = collision_sprite()
         # game_active = collisions(player_rect,obstacle_rect_list)
 
     else:
