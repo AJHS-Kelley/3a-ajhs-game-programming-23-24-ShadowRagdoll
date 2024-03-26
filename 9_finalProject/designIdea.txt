@@ -16,3 +16,6 @@ loss Condition: run out of heatlh
 difficulty changes:
     enemy has more heatlh
     no backup item
+
+control scheme:
+    mouse click for select
