@@ -1,0 +1,18 @@
+Game Type: rpg card fight
+
+Levels: cutscenes and the fight
+    the story cutscenes expleianing whats going on
+    the main mechncains of fighting
+
+Enemies / Obstacles: law
+    cat guard 
+
+Items / Equipment / Objects:
+    cards
+
+Win Condition: who ever has heatlh left
+loss Condition: run out of heatlh
+
+difficulty changes:
+    enemy has more heatlh
+    no backup item
