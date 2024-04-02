@@ -8,14 +8,14 @@ a, b, c = integers.split()
 a = int(a)
 b = int(b)
 c = int(c)
+
 if a > b:
     a, b = b, a # Extremely common method to swap values
-elif c < b:
+if c < b:
     c, b = b, c # Extremely common method to swap values
-elif a > b:
+if a > b:
     a, b = b, a
-print(f"{a} {b} {c}")
-
+#print(f"{a} {b} {c}")
 
 # input the order
 # create a string for output
@@ -25,4 +25,16 @@ print(f"{a} {b} {c}")
     # if letter is C, add C integer + " " to string
 # print the correct order to the screen.
 
+order = input()
+myString = ""
+
+for i in range(len(order)):
+    if order[i] == "A":
+        myString += str(a) + " "
+    elif order[i] == "B":
+        myString += str(b) + " "
+    else: 
+        myString += str(c) + " "
+
+print(myString)
 
