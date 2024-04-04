@@ -27,3 +27,18 @@ print(string1[:23]) # start the beginning, stop 1 BEFORE stopValue.
 
 # slice the whole thing
 print(string2[:])
+
+# negative slices
+print(alphabet[-7:-2])
+
+# example -- password verifications
+if password[:-1] == " ":
+    password = password[:-1]
+
+# example -- removing uneeded information
+name = "Mrs. Squarepants"
+
+if name[1:4] == "Mrs.":
+    name = name[5:]
+elif name[1:3] == "Mr.":
+    name = name[4:]
