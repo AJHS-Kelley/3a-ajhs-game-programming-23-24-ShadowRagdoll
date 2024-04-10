@@ -4,10 +4,11 @@ import pygame
 from sys import exit
 
 pygame.init()
-screen = pygame.display.set_mode((1024, 768))
+screen = pygame.display.set_mode((2000, 1200))
 pygame.display.set_caption("Lucky's unlucky tail")
 clock = pygame.time.Clock()
 
+tileScreen = pygame.image.load('img/finalProject/Title_Screen.gif')
 # probery have the cards be something seperade and be maybe be random
 
 while True:
@@ -15,7 +16,8 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
-    # draw all our elements
-    # update everything
+    
+    screen.blit(tileScreen,(0,0))
+    
     pygame.display.update()
     clock.tick(60)
